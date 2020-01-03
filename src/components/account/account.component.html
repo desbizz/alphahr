@@ -1,0 +1,28 @@
+<form #f="ngForm" (ngSubmit)="submit()">
+    <div class="form-group row">
+      <label for="banknName" class="col-sm-2 col-form-label">Bank name</label>
+      <div class="col-sm-10">
+        <input type="text"  class="form-control" id="banknName" name="banknName" [(ngModel)]="individual.account.banknName" placeholder="banknName">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="accountNumber" class="col-sm-2 col-form-label">Account Number</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="accountNumber" name="accountNumber" [(ngModel)]="individual.account.accountNumber" placeholder="account number">
+      </div>
+    </div>
+    <div class="form-group row">
+            <label for="pensionName" class="col-sm-2 col-form-label">Pension bank name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="pensionName" name="pensionName" [(ngModel)]="individual.account.pensionName" placeholder="pension name">
+            </div>
+          </div>
+          <div class="form-group row">
+                <label for="pensionAccount" class="col-sm-2 col-form-label">Pension account number</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="pensionAccount" name="pensionAccount" [(ngModel)]="individual.account.pensionAccount" placeholder="Pension account number">
+                </div>
+              </div>
+            
+                          <button>Save</button>
+  </form>
