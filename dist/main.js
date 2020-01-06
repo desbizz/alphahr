@@ -18,7 +18,7 @@ module.exports = "<body>\r\n  <app-header>cd</app-header>\r\n  <div class=\"cont
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form #f=\"ngForm\" (ngSubmit)=\"submit()\">\n    <div class=\"form-group row\">\n      <label for=\"banknName\" class=\"col-sm-2 col-form-label\">Bank name</label>\n      <div class=\"col-sm-10\">\n        <input type=\"text\"  class=\"form-control\" id=\"banknName\" name=\"banknName\" [(ngModel)]=\"individual.account.banknName\" placeholder=\"banknName\">\n      </div>\n    </div>\n    <div class=\"form-group row\">\n      <label for=\"accountNumber\" class=\"col-sm-2 col-form-label\">Account Number</label>\n      <div class=\"col-sm-10\">\n        <input type=\"text\" class=\"form-control\" id=\"accountNumber\" name=\"accountNumber\" [(ngModel)]=\"individual.account.accountNumber\" placeholder=\"account number\">\n      </div>\n    </div>\n    <div class=\"form-group row\">\n            <label for=\"pensionName\" class=\"col-sm-2 col-form-label\">Pension bank name</label>\n            <div class=\"col-sm-10\">\n              <input type=\"text\" class=\"form-control\" id=\"pensionName\" name=\"pensionName\" [(ngModel)]=\"individual.account.pensionName\" placeholder=\"pension name\">\n            </div>\n          </div>\n          <div class=\"form-group row\">\n                <label for=\"pensionAccount\" class=\"col-sm-2 col-form-label\">Pension account number</label>\n                <div class=\"col-sm-10\">\n                  <input type=\"text\" class=\"form-control\" id=\"pensionAccount\" name=\"pensionAccount\" [(ngModel)]=\"individual.account.pensionAccount\" placeholder=\"Pension account number\">\n                </div>\n              </div>\n            \n                          <button>Save</button>\n  </form>\n"
+module.exports = "<form #f=\"ngForm\" (ngSubmit)=\"submit()\">\r\n    <div class=\"form-group row\">\r\n      <label for=\"banknName\" class=\"col-sm-2 col-form-label\">Bank name</label>\r\n      <div class=\"col-sm-10\">\r\n        <input type=\"text\"  class=\"form-control\" id=\"banknName\" name=\"bankName\" [(ngModel)]=\"account.bankName\" placeholder=\"banknName\">\r\n      </div>\r\n    </div>\r\n    <div class=\"form-group row\">\r\n      <label for=\"accountNumber\" class=\"col-sm-2 col-form-label\">Account Number</label>\r\n      <div class=\"col-sm-10\">\r\n        <input type=\"text\" class=\"form-control\" id=\"accountNumber\" name=\"accountNumber\" [(ngModel)]=\"account.accountNumber\" placeholder=\"account number\">\r\n      </div>\r\n    </div>\r\n    <div class=\"form-group row\">\r\n            <label for=\"pensionName\" class=\"col-sm-2 col-form-label\">Pension bank name</label>\r\n            <div class=\"col-sm-10\">\r\n              <input type=\"text\" class=\"form-control\" id=\"pensionName\" name=\"pensionName\" [(ngModel)]=\"account.pensionName\" placeholder=\"pension name\">\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group row\">\r\n                <label for=\"pensionAccount\" class=\"col-sm-2 col-form-label\">Pension account number</label>\r\n                <div class=\"col-sm-10\">\r\n                  <input type=\"text\" class=\"form-control\" id=\"pensionAccount\" name=\"pensionAccount\" [(ngModel)]=\"account.pensionAccount\" placeholder=\"Pension account number\">\r\n                </div>\r\n              </div>\r\n            \r\n                          <button>Save</button>\r\n  </form>\r\n"
 
 /***/ }),
 
@@ -29,7 +29,7 @@ module.exports = "<form #f=\"ngForm\" (ngSubmit)=\"submit()\">\n    <div class=\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header>\n  <nav class='navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3' >\n    <div class=\"container\">\n      <a class=\"navbar-brand\" [routerLink]='[\"/\"]'>AlphaHRMS SOLUTION</a>\n      <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\".navbar-collapse\" aria-label=\"Toggle navigation\"\n        [attr.aria-expanded]=\"isExpanded\" (click)=\"toggle()\">\n        <span class=\"navbar-toggler-icon\"></span>\n      </button>\n      <div class=\"navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse\" [ngClass]='{\"show\": isExpanded}'>\n        <ul class=\"navbar-nav flex-grow\">\n          <li class=\"nav-item\" [routerLinkActive]='[\"link-active\"]' [routerLinkActiveOptions]='{ exact: true }'>\n            <a class=\"nav-link text-dark\" [routerLink]='[\"/\"]'>Home</a>\n          \n          </li>\n          <li class=\"nav-item\" [routerLinkActive]='[\"link-active\"]' [routerLinkActiveOptions]='{ exact: true }'>\n             \n              <a class=\"nav-link text-dark\" (click)=\"logout()\">Logout</a>\n            </li>\n        \n          <li class=\"nav-item\"></li>\n        \n    \n        </ul>\n      </div>\n    </div>\n  \n  \n    <form class=\"form-inline my-2 my-lg-0\">\n      <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\n      <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\n    </form>\n  </nav>\n</header>\n"
+module.exports = "<header>\r\n  <nav class='navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3' >\r\n    <div class=\"container\">\r\n      <a class=\"navbar-brand\" [routerLink]='[\"/\"]'>AlphaHRMS SOLUTION</a>\r\n      <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\".navbar-collapse\" aria-label=\"Toggle navigation\"\r\n        [attr.aria-expanded]=\"isExpanded\" (click)=\"toggle()\">\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n      </button>\r\n      <div class=\"navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse\" [ngClass]='{\"show\": isExpanded}'>\r\n        <ul class=\"navbar-nav flex-grow\">\r\n          <li class=\"nav-item\" [routerLinkActive]='[\"link-active\"]' [routerLinkActiveOptions]='{ exact: true }'>\r\n            <a class=\"nav-link text-dark\" [routerLink]='[\"/\"]'>Home</a>\r\n          \r\n          </li>\r\n          <li class=\"nav-item\" [routerLinkActive]='[\"link-active\"]' [routerLinkActiveOptions]='{ exact: true }'>\r\n             \r\n              <a class=\"nav-link text-dark\" (click)=\"logout()\">Logout</a>\r\n            </li>\r\n        \r\n          <li class=\"nav-item\"></li>\r\n        \r\n    \r\n        </ul>\r\n      </div>\r\n    </div>\r\n  \r\n  \r\n    <form class=\"form-inline my-2 my-lg-0\">\r\n      <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\r\n      <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\r\n    </form>\r\n  </nav>\r\n</header>\r\n"
 
 /***/ }),
 
@@ -40,7 +40,7 @@ module.exports = "<header>\n  <nav class='navbar navbar-expand-sm navbar-togglea
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form #f=\"ngForm\" (ngSubmit)=\"submit()\">\n    <div class=\"form-group row\">\n      <label for=\"status\" class=\"col-sm-2 col-form-label\">Job status</label>\n      <div class=\"col-sm-10\">\n        <input type=\"text\"  class=\"form-control\" id=\"status\" name=\"status\" [(ngModel)]=\"individual.account.status\" placeholder=\"status\">\n      </div>\n    </div>\n    <div class=\"form-group row\">\n      <label for=\"unit\" class=\"col-sm-2 col-form-label\">Unit</label>\n      <div class=\"col-sm-10\">\n        <input type=\"text\" class=\"form-control\" id=\"unit\" name=\"unit\" [(ngModel)]=\"individual.account.unit\" placeholder=\"Unit\">\n      </div>\n    </div>\n    <div class=\"form-group row\">\n            <label for=\"subUnit\" class=\"col-sm-2 col-form-label\">Sub unit</label>\n            <div class=\"col-sm-10\">\n              <input type=\"text\" class=\"form-control\" id=\"subUnit\" name=\"subUnit\" [(ngModel)]=\"individual.account.subUnit\" placeholder=\"Sub Unit\">\n            </div>\n          </div>\n          <div class=\"form-group row\">\n                <label for=\"designation\" class=\"col-sm-2 col-form-label\">Designation</label>\n                <div class=\"col-sm-10\">\n                  <input type=\"text\" class=\"form-control\" id=\"designation\" name=\"designation\" [(ngModel)]=\"individual.account.designation\" placeholder=\"Designation\">\n                </div>\n              </div>\n              <div class=\"form-group row\">\n                  <label for=\"designation\" class=\"col-sm-2 col-form-label\">Designation</label>\n                  <div class=\"col-sm-10\">\n                    <input type=\"text\" class=\"form-control\" id=\"designation\" name=\"designation\" [(ngModel)]=\"individual.account.designation\" placeholder=\"Designation\">\n                  </div>\n                </div>\n                <div class=\"form-group row\">\n                    <label for=\"salaryScale\" class=\"col-sm-2 col-form-label\">Salary Scale</label>\n                    <div class=\"col-sm-10\">\n                      <input type=\"text\" class=\"form-control\" id=\"salaryScale\" name=\"salaryScale\" [(ngModel)]=\"individual.account.salaryScale\" placeholder=\"Salary scale\">\n                    </div>\n                  </div>\n            \n                          <button>Save</button>\n  </form>\n"
+module.exports = "<form #f=\"ngForm\" (ngSubmit)=\"submit()\">\r\n    <div class=\"form-group row\">\r\n      <label for=\"status\" class=\"col-sm-2 col-form-label\">Job status</label>\r\n      <div class=\"col-sm-10\">\r\n        <input type=\"text\"  class=\"form-control\" id=\"status\" name=\"status\" [(ngModel)]=\"job.status\" placeholder=\"status\">\r\n      </div>\r\n    </div>\r\n    <div class=\"form-group row\">\r\n      <label for=\"unit\" class=\"col-sm-2 col-form-label\">Unit</label>\r\n      <div class=\"col-sm-10\">\r\n        <input type=\"text\" class=\"form-control\" id=\"unit\" name=\"unit\" [(ngModel)]=\"job.unit\" placeholder=\"Unit\">\r\n      </div>\r\n    </div>\r\n    <div class=\"form-group row\">\r\n            <label for=\"subUnit\" class=\"col-sm-2 col-form-label\">Sub unit</label>\r\n            <div class=\"col-sm-10\">\r\n              <input type=\"text\" class=\"form-control\" id=\"subUnit\" name=\"subUnit\" [(ngModel)]=\"job.subUnit\" placeholder=\"Sub Unit\">\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group row\">\r\n                <label for=\"designation\" class=\"col-sm-2 col-form-label\">Designation</label>\r\n                <div class=\"col-sm-10\">\r\n                  <input type=\"text\" class=\"form-control\" id=\"designation\" name=\"designation\" [(ngModel)]=\"job.designation\" placeholder=\"Designation\">\r\n                </div>\r\n              </div>\r\n            \r\n                <div class=\"form-group row\">\r\n                    <label for=\"salaryScale\" class=\"col-sm-2 col-form-label\">Salary Scale</label>\r\n                    <div class=\"col-sm-10\">\r\n                      <input type=\"text\" class=\"form-control\" id=\"salaryScale\" name=\"salaryScale\" [(ngModel)]=\"job.salaryScale\" placeholder=\"Salary scale\">\r\n                    </div>\r\n                  </div>\r\n            \r\n                          <button>Save</button>\r\n  </form>\r\n"
 
 /***/ }),
 
@@ -51,7 +51,7 @@ module.exports = "<form #f=\"ngForm\" (ngSubmit)=\"submit()\">\n    <div class=\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n        <div class=\"col-md-6 new-user-alert\">\n            <div *ngIf=\"brandNew\" class=\"alert alert-success\" role=\"alert\">\n                <strong>All set!</strong> Please login with your account\n            </div>  \n            <h2>Login</h2>        \n        </div>\n      </div>\n      \n      <div class=\"row\">\n        <div class=\"col-md-6\">\n            <form #f=\"ngForm\" novalidate (ngSubmit)=\"login(f)\">\n                \n                <div class=\"form-group\">\n                  <label for=\"email\">Email</label>\n                  <input id=\"email\" type=\"text\" required name=\"email\" class=\"form-control\" placeholder=\"Email\" [ngModel]=\"credentials.email\" #email=\"ngModel\" tmFocus validateEmail>\n                  <small [hidden]=\"email.valid || (email.pristine && !submitted)\" class=\"text-danger\">Please enter a valid email</small>\n                </div>\n                <div class=\"form-group\">\n                  <label for=\"password\">Password</label>\n                  <input type=\"password\" class=\"form-control\" id=\"password\" required name=\"password\" placeholder=\"Password\" ngModel>\n                </div>          \n      \n                <div class=\"form-group\">\n                    <button type=\"submit\" class=\"btn btn-primary\" [disabled]=\"f.invalid || isRequesting\">Login</button>\n                    <app-spinner [isRunning]=\"isRequesting\"></app-spinner> \n                </div>\n      \n                <div *ngIf=\"errors\" class=\"alert alert-danger\" role=\"alert\">\n                    <strong>Oops!</strong> {{errors}}\n                  </div> \n                \n              </form>\n         </div>\n      </div>\n      "
+module.exports = "<div class=\"row\">\r\n        <div class=\"col-md-6 new-user-alert\">\r\n            <div *ngIf=\"brandNew\" class=\"alert alert-success\" role=\"alert\">\r\n                <strong>All set!</strong> Please login with your account\r\n            </div>  \r\n            <h2>Login</h2>        \r\n        </div>\r\n      </div>\r\n      \r\n      <div class=\"row\">\r\n        <div class=\"col-md-6\">\r\n            <form #f=\"ngForm\" novalidate (ngSubmit)=\"login(f)\">\r\n                \r\n                <div class=\"form-group\">\r\n                  <label for=\"email\">Email</label>\r\n                  <input id=\"email\" type=\"text\" required name=\"email\" class=\"form-control\" placeholder=\"Email\" [ngModel]=\"credentials.email\" #email=\"ngModel\" tmFocus validateEmail>\r\n                  <small [hidden]=\"email.valid || (email.pristine && !submitted)\" class=\"text-danger\">Please enter a valid email</small>\r\n                </div>\r\n                <div class=\"form-group\">\r\n                  <label for=\"password\">Password</label>\r\n                  <input type=\"password\" class=\"form-control\" id=\"password\" required name=\"password\" placeholder=\"Password\" ngModel>\r\n                </div>          \r\n      \r\n                <div class=\"form-group\">\r\n                    <button type=\"submit\" class=\"btn btn-primary\" [disabled]=\"f.invalid || isRequesting\">Login</button>\r\n                    <app-spinner [isRunning]=\"isRequesting\"></app-spinner> \r\n                </div>\r\n      \r\n                <div *ngIf=\"errors\" class=\"alert alert-danger\" role=\"alert\">\r\n                    <strong>Oops!</strong> {{errors}}\r\n                  </div> \r\n                \r\n              </form>\r\n         </div>\r\n      </div>\r\n      "
 
 /***/ }),
 
@@ -62,7 +62,18 @@ module.exports = "<div class=\"row\">\n        <div class=\"col-md-6 new-user-al
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div [hidden]=\"!isDelayedRunning\" class=\"spinner\">  \n    <div class=\"double-bounce1\"></div>\n    <div class=\"double-bounce2\"></div>\n</div> "
+module.exports = "<div [hidden]=\"!isDelayedRunning\" class=\"spinner\">  \r\n    <div class=\"double-bounce1\"></div>\r\n    <div class=\"double-bounce2\"></div>\r\n</div> "
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/components/staff-page/staff-page.component.html":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/components/staff-page/staff-page.component.html ***!
+  \***************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div [routerLinkActive]=\"['link-active']\">\n    <a [routerLink]=\"['/editJob']\">\n        <span class='glyphicon glyphicon-edit'></span> Edit Job Details\n    </a>\n</div> \n<div [routerLinkActive]=\"['link-active']\">\n    <a [routerLink]=\"['/editaccount']\">\n        <span class='glyphicon glyphicon-edit'></span> Edit Account Details\n    </a>\n</div> \n"
 
 /***/ }),
 
@@ -73,7 +84,7 @@ module.exports = "<div [hidden]=\"!isDelayedRunning\" class=\"spinner\">  \n    
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 *ngIf=\"!individual.id\">Add New Staff</h1>\n<h1 *ngIf=\"individual.id\">Edit Staff</h1>\n\n<form #f=\"ngForm\" (ngSubmit)=\"submit()\">\n        <div class=\"form-group row\">\n          <label for=\"surname\" class=\"col-sm-2 col-form-label\">Surname</label>\n          <div class=\"col-sm-10\">\n            <input type=\"text\"  class=\"form-control\" id=\"surname\" name=\"surname\" [(ngModel)]=\"individual.surname\" placeholder=\"surname\">\n          </div>\n        </div>\n        <div class=\"form-group row\">\n          <label for=\"firstname\" class=\"col-sm-2 col-form-label\">Firstname</label>\n          <div class=\"col-sm-10\">\n            <input type=\"text\" class=\"form-control\" id=\"firstname\" name=\"firstname\" [(ngModel)]=\"individual.firstname\" placeholder=\"firstname\">\n          </div>\n        </div>\n        <div class=\"form-group row\">\n                <label for=\"othernames\" class=\"col-sm-2 col-form-label\">Othernames</label>\n                <div class=\"col-sm-10\">\n                  <input type=\"text\" class=\"form-control\" id=\"firstname\" name=\"othernames\" [(ngModel)]=\"individual.othernames\" placeholder=\"othernames\">\n                </div>\n              </div>\n              <div class=\"form-group row\">\n                    <label for=\"staffNumber\" class=\"col-sm-2 col-form-label\">Staff number</label>\n                    <div class=\"col-sm-10\">\n                      <input type=\"text\" class=\"form-control\" id=\"staffNumber\" name=\"staffNumber\" [(ngModel)]=\"individual.staffNumber\" placeholder=\"Staff number\">\n                    </div>\n                  </div>\n                  <div class=\"form-group row\">\n                        <label for=\"recordNumber\" class=\"col-sm-2 col-form-label\">Establishment number</label>\n                        <div class=\"col-sm-10\">\n                          <input type=\"text\" class=\"form-control\" id=\"recordNumber\" name=\"recordNumber\" [(ngModel)]=\"individual.recordNumber\" placeholder=\"Record number\">\n                        </div>\n                      </div>\n                      <div class=\"form-group row\">\n                            <label for=\"firstname\" class=\"col-sm-2 col-form-label\">Email</label>\n                            <div class=\"col-sm-10\">\n                              <input type=\"text\" class=\"form-control\" id=\"email\" name=\"email\" [(ngModel)]=\"individual.email\" placeholder=\"example@example.com\">\n                            </div>\n                          </div>\n                          <div class=\"form-group row\">\n                                <label for=\"firstname\" class=\"col-sm-2 col-form-label\">Birth date</label>\n                                <div class=\"col-sm-10\">\n                                  <input type=\"text\" class=\"form-control\" id=\"dob\" name=\"dob\" [(ngModel)]=\"individual.dob\" placeholder=\"Date of Birth\">\n                                </div>\n                              </div>\n\n                              <button>Save</button>\n      </form>\n"
+module.exports = "<h1 *ngIf=\"!individual.id\">Add New Staff</h1>\r\n<h1 *ngIf=\"individual.id\">Edit Staff</h1>\r\n\r\n<form #f=\"ngForm\" (ngSubmit)=\"submit()\">\r\n        <div class=\"form-group row\">\r\n          <label for=\"surname\" class=\"col-sm-2 col-form-label\">Surname</label>\r\n          <div class=\"col-sm-10\">\r\n            <input type=\"text\"  class=\"form-control\" id=\"surname\" name=\"surname\" [(ngModel)]=\"individual.surname\" placeholder=\"surname\">\r\n          </div>\r\n        </div>\r\n        <div class=\"form-group row\">\r\n          <label for=\"firstname\" class=\"col-sm-2 col-form-label\">Firstname</label>\r\n          <div class=\"col-sm-10\">\r\n            <input type=\"text\" class=\"form-control\" id=\"firstname\" name=\"firstname\" [(ngModel)]=\"individual.firstname\" placeholder=\"firstname\">\r\n          </div>\r\n        </div>\r\n        <div class=\"form-group row\">\r\n                <label for=\"othernames\" class=\"col-sm-2 col-form-label\">Othernames</label>\r\n                <div class=\"col-sm-10\">\r\n                  <input type=\"text\" class=\"form-control\" id=\"firstname\" name=\"othernames\" [(ngModel)]=\"individual.othernames\" placeholder=\"othernames\">\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group row\">\r\n                    <label for=\"staffNumber\" class=\"col-sm-2 col-form-label\">Staff number</label>\r\n                    <div class=\"col-sm-10\">\r\n                      <input type=\"text\" class=\"form-control\" id=\"staffnumber\" name=\"staffnumber\" [(ngModel)]=\"individual.staffnumber\" placeholder=\"Staff number\">\r\n                    </div>\r\n                  </div>\r\n                  <div class=\"form-group row\">\r\n                        <label for=\"recordNumber\" class=\"col-sm-2 col-form-label\">Establishment number</label>\r\n                        <div class=\"col-sm-10\">\r\n                          <input type=\"text\" class=\"form-control\" id=\"recordnumber\" name=\"recordnumber\" [(ngModel)]=\"individual.recordnumber\" placeholder=\"Record number\">\r\n                        </div>\r\n                      </div>\r\n                      <div class=\"form-group row\">\r\n                            <label for=\"firstname\" class=\"col-sm-2 col-form-label\">Email</label>\r\n                            <div class=\"col-sm-10\">\r\n                              <input type=\"text\" class=\"form-control\" id=\"email\" name=\"email\" [(ngModel)]=\"individual.email\" placeholder=\"example@example.com\">\r\n                            </div>\r\n                          </div>\r\n                          <div class=\"form-group row\">\r\n                                <label for=\"firstname\" class=\"col-sm-2 col-form-label\">Birth date</label>\r\n                                <div class=\"col-sm-10\">\r\n                                  <input type=\"text\" class=\"form-control\" id=\"dob\" name=\"dob\" [(ngModel)]=\"individual.dob\" placeholder=\"Date of Birth\">\r\n                                </div>\r\n                              </div>\r\n\r\n                              <button>Save</button>\r\n      </form>\r\n"
 
 /***/ }),
 
@@ -132,6 +143,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
         this.title = 'app';
+        this.individual = {};
     }
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -173,12 +185,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_components_staff_staff_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! src/components/staff/staff.component */ "./src/components/staff/staff.component.ts");
 /* harmony import */ var src_components_job_job_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! src/components/job/job.component */ "./src/components/job/job.component.ts");
 /* harmony import */ var src_components_account_account_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! src/components/account/account.component */ "./src/components/account/account.component.ts");
+/* harmony import */ var src_components_staff_page_staff_page_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! src/components/staff-page/staff-page.component */ "./src/components/staff-page/staff-page.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -206,6 +220,7 @@ var AppModule = /** @class */ (function () {
                 src_components_job_job_component__WEBPACK_IMPORTED_MODULE_14__["JobComponent"],
                 src_components_account_account_component__WEBPACK_IMPORTED_MODULE_15__["AccountComponent"],
                 _components_header_header_component__WEBPACK_IMPORTED_MODULE_2__["HeaderComponent"],
+                src_components_staff_page_staff_page_component__WEBPACK_IMPORTED_MODULE_16__["StaffPageComponent"],
                 src_components_login_login_component__WEBPACK_IMPORTED_MODULE_1__["LoginComponent"],
                 src_components_spinner_spinner_component__WEBPACK_IMPORTED_MODULE_0__["SpinnerComponent"],
             ],
@@ -220,6 +235,7 @@ var AppModule = /** @class */ (function () {
                     { path: 'editstaff/:id', component: src_components_staff_staff_component__WEBPACK_IMPORTED_MODULE_13__["StaffComponent"] },
                     { path: 'editJob', component: src_components_job_job_component__WEBPACK_IMPORTED_MODULE_14__["JobComponent"] },
                     { path: 'editaccount', component: src_components_account_account_component__WEBPACK_IMPORTED_MODULE_15__["AccountComponent"] },
+                    { path: 'staff', component: src_components_staff_page_staff_page_component__WEBPACK_IMPORTED_MODULE_16__["StaffPageComponent"] },
                     // { path: '',component: ListrechargeComponent, canActivate: [AuthGuard] },
                     { path: 'login', component: src_components_login_login_component__WEBPACK_IMPORTED_MODULE_1__["LoginComponent"] },
                 ])
@@ -260,6 +276,9 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AccountComponent", function() { return AccountComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_app_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/app.component */ "./src/app/app.component.ts");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
+/* harmony import */ var src_services_individual_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/services/individual.service */ "./src/services/individual.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -270,20 +289,42 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
 var AccountComponent = /** @class */ (function () {
-    function AccountComponent() {
+    function AccountComponent(individual, toastr, individualService) {
+        this.individual = individual;
+        this.toastr = toastr;
+        this.individualService = individualService;
+        this.account = {};
     }
     AccountComponent.prototype.ngOnInit = function () {
+        this.may = this.individual.individual[0];
+        if (this.may.account)
+            this.account = this.may.account;
+        // this.setJob(this.may)
     };
     AccountComponent.prototype.submit = function () {
+        console.log(this.account);
+        this.may.account = this.account;
+        console.log(this.may);
+        this.individualService.UpdateStaff(this.may).subscribe(function (x) {
+        });
+        this.toastr.success(this.individual.individual.firstname, ' is Updated');
     };
+    AccountComponent.ctorParameters = function () { return [
+        { type: src_app_app_component__WEBPACK_IMPORTED_MODULE_1__["AppComponent"] },
+        { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_2__["ToastrService"] },
+        { type: src_services_individual_service__WEBPACK_IMPORTED_MODULE_3__["IndividualService"] }
+    ]; };
     AccountComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-account',
             template: __webpack_require__(/*! raw-loader!./account.component.html */ "./node_modules/raw-loader/index.js!./src/components/account/account.component.html"),
             styles: [__webpack_require__(/*! ./account.component.css */ "./src/components/account/account.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [src_app_app_component__WEBPACK_IMPORTED_MODULE_1__["AppComponent"], ngx_toastr__WEBPACK_IMPORTED_MODULE_2__["ToastrService"], src_services_individual_service__WEBPACK_IMPORTED_MODULE_3__["IndividualService"]])
     ], AccountComponent);
     return AccountComponent;
 }());
@@ -394,6 +435,9 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JobComponent", function() { return JobComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_app_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/app.component */ "./src/app/app.component.ts");
+/* harmony import */ var src_services_individual_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/services/individual.service */ "./src/services/individual.service.ts");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -404,20 +448,42 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
 var JobComponent = /** @class */ (function () {
-    function JobComponent() {
+    function JobComponent(individual, toastr, individualService) {
+        this.individual = individual;
+        this.toastr = toastr;
+        this.individualService = individualService;
+        this.may = {};
+        this.job = {};
     }
     JobComponent.prototype.ngOnInit = function () {
+        this.may = this.individual.individual[0];
+        if (this.may.job)
+            this.job = this.may.job;
+        console.log(this.job);
+        // this.setJob(this.may)
     };
     JobComponent.prototype.submit = function () {
+        this.may.job = this.job;
+        this.individualService.UpdateStaff(this.may).subscribe(function (x) {
+        });
+        this.toastr.success(this.individual.individual.firstname, ' is Updated');
     };
+    JobComponent.ctorParameters = function () { return [
+        { type: src_app_app_component__WEBPACK_IMPORTED_MODULE_1__["AppComponent"] },
+        { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_3__["ToastrService"] },
+        { type: src_services_individual_service__WEBPACK_IMPORTED_MODULE_2__["IndividualService"] }
+    ]; };
     JobComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-job',
             template: __webpack_require__(/*! raw-loader!./job.component.html */ "./node_modules/raw-loader/index.js!./src/components/job/job.component.html"),
             styles: [__webpack_require__(/*! ./job.component.css */ "./src/components/job/job.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [src_app_app_component__WEBPACK_IMPORTED_MODULE_1__["AppComponent"], ngx_toastr__WEBPACK_IMPORTED_MODULE_3__["ToastrService"], src_services_individual_service__WEBPACK_IMPORTED_MODULE_2__["IndividualService"]])
     ], JobComponent);
     return JobComponent;
 }());
@@ -594,6 +660,85 @@ var SpinnerComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/components/staff-page/staff-page.component.css":
+/*!************************************************************!*\
+  !*** ./src/components/staff-page/staff-page.component.css ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvY29tcG9uZW50cy9zdGFmZi1wYWdlL3N0YWZmLXBhZ2UuY29tcG9uZW50LmNzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/components/staff-page/staff-page.component.ts":
+/*!***********************************************************!*\
+  !*** ./src/components/staff-page/staff-page.component.ts ***!
+  \***********************************************************/
+/*! exports provided: StaffPageComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StaffPageComponent", function() { return StaffPageComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_app_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/app.component */ "./src/app/app.component.ts");
+/* harmony import */ var src_services_individual_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/services/individual.service */ "./src/services/individual.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var StaffPageComponent = /** @class */ (function () {
+    function StaffPageComponent(route, individual, individualService) {
+        this.route = route;
+        this.individual = individual;
+        this.individualService = individualService;
+        this.query = [];
+        this.may = [];
+        route.params.subscribe(function (p) {
+            //this.job.id = +p['id'];
+        });
+    }
+    StaffPageComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.query._id = "5e112e6e3986d872ecf6ccb0";
+        this.individualService.getStaff(this.query).subscribe(function (result) {
+            _this.individual.individual = result;
+            _this.may = _this.individual.individual;
+            console.log(result);
+            console.log(_this.individual.individual);
+        });
+    };
+    StaffPageComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
+        { type: src_app_app_component__WEBPACK_IMPORTED_MODULE_1__["AppComponent"] },
+        { type: src_services_individual_service__WEBPACK_IMPORTED_MODULE_2__["IndividualService"] }
+    ]; };
+    StaffPageComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-staff-page',
+            template: __webpack_require__(/*! raw-loader!./staff-page.component.html */ "./node_modules/raw-loader/index.js!./src/components/staff-page/staff-page.component.html"),
+            styles: [__webpack_require__(/*! ./staff-page.component.css */ "./src/components/staff-page/staff-page.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], src_app_app_component__WEBPACK_IMPORTED_MODULE_1__["AppComponent"], src_services_individual_service__WEBPACK_IMPORTED_MODULE_2__["IndividualService"]])
+    ], StaffPageComponent);
+    return StaffPageComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/components/staff/staff.component.css":
 /*!**************************************************!*\
   !*** ./src/components/staff/staff.component.css ***!
@@ -616,6 +761,8 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StaffComponent", function() { return StaffComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_services_individual_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/services/individual.service */ "./src/services/individual.service.ts");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -626,20 +773,41 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var StaffComponent = /** @class */ (function () {
-    function StaffComponent() {
+    function StaffComponent(individualService, toastr) {
+        this.individualService = individualService;
+        this.toastr = toastr;
+        this.individual = {
+            _id: "",
+            title: "",
+            surname: "",
+            firstname: "",
+            othernames: "",
+            staffnumber: "",
+            recordnumber: "",
+            email: ""
+        };
     }
     StaffComponent.prototype.ngOnInit = function () {
     };
     StaffComponent.prototype.submit = function () {
+        this.individualService.createStaff(this.individual).subscribe(function (x) {
+        });
+        this.toastr.success(this.individual.firstname, ' is Added');
     };
+    StaffComponent.ctorParameters = function () { return [
+        { type: src_services_individual_service__WEBPACK_IMPORTED_MODULE_1__["IndividualService"] },
+        { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_2__["ToastrService"] }
+    ]; };
     StaffComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-staff',
             template: __webpack_require__(/*! raw-loader!./staff.component.html */ "./node_modules/raw-loader/index.js!./src/components/staff/staff.component.html"),
             styles: [__webpack_require__(/*! ./staff.component.css */ "./src/components/staff/staff.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [src_services_individual_service__WEBPACK_IMPORTED_MODULE_1__["IndividualService"], ngx_toastr__WEBPACK_IMPORTED_MODULE_2__["ToastrService"]])
     ], StaffComponent);
     return StaffComponent;
 }());
@@ -883,6 +1051,68 @@ var ErrorInterceptor = /** @class */ (function () {
         __metadata("design:paramtypes", [_authenticated_service__WEBPACK_IMPORTED_MODULE_3__["AuthenticationService"]])
     ], ErrorInterceptor);
     return ErrorInterceptor;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/services/individual.service.ts":
+/*!********************************************!*\
+  !*** ./src/services/individual.service.ts ***!
+  \********************************************/
+/*! exports provided: IndividualService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IndividualService", function() { return IndividualService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var IndividualService = /** @class */ (function () {
+    function IndividualService(http) {
+        this.http = http;
+    }
+    IndividualService.prototype.createStaff = function (individual) {
+        return this.http.post('/individual', individual);
+    };
+    IndividualService.prototype.UpdateStaff = function (update) {
+        console.log(update);
+        return this.http.patch('/individual/' + update._id, update);
+    };
+    IndividualService.prototype.getStaff = function (filter) {
+        return this.http.get('/individual' + '?' + this.toQueryString(filter));
+    };
+    IndividualService.prototype.toQueryString = function (obj) {
+        var parts = [];
+        for (var property in obj) {
+            var value = obj[property];
+            if (value != null && value != undefined && value != 'NaN' && value != null)
+                parts.push(encodeURIComponent(property) + '=' + encodeURIComponent(value));
+        }
+        return parts.join('&');
+    };
+    IndividualService.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
+    ]; };
+    IndividualService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+    ], IndividualService);
+    return IndividualService;
 }());
 
 

@@ -21,6 +21,7 @@ import { AuthGuard } from 'src/services/auth-gaurd.service';
 import { StaffComponent } from 'src/components/staff/staff.component';
 import { JobComponent } from 'src/components/job/job.component';
 import { AccountComponent } from 'src/components/account/account.component';
+import { StaffPageComponent } from 'src/components/staff-page/staff-page.component';
 
 
 
@@ -32,6 +33,7 @@ import { AccountComponent } from 'src/components/account/account.component';
     AccountComponent,
 
     HeaderComponent,
+    StaffPageComponent,
    
     LoginComponent,
     SpinnerComponent,
@@ -52,6 +54,9 @@ import { AccountComponent } from 'src/components/account/account.component';
      { path: 'editstaff/:id', component: StaffComponent },
      { path: 'editJob', component: JobComponent },
      { path: 'editaccount', component: AccountComponent },
+     { path: 'staff', component: StaffPageComponent },
+     { path: 'allowance', component: StaffPageComponent },
+     { path: 'deduction', component: StaffPageComponent },
     
     // { path: '',component: ListrechargeComponent, canActivate: [AuthGuard] },
      { path: 'login', component: LoginComponent },

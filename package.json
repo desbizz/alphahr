@@ -1,9 +1,19 @@
 {
-  "name": "SmileRecharge",
+  "name": "AlphaHr",
   "version": "0.0.0",
-  "scripts": {
+  "watch": {
+    "watch-angular": {
+      "patterns": [
+        "app"
+      ],
+      "extensions": "ts,html,scss",
+      "quiet": false
+    }
+  },
+    "scripts": {
     "dev": "env-cmd -f ./config/dev.env nodemon server/server.js",
-    "start": "node server/server.js"
+    "start": "ng build",
+    "watch-angular":"ng build"
   },
   "private": true,
   "dependencies": {
@@ -28,6 +38,7 @@
     "mongoose": "^5.7.6",
     "mongoose-auto-increment": "^5.0.1",
     "ngx-toastr": "^11.1.2",
+    "npm-watch": "^0.6.0",
     "oidc-client": "^1.9.0",
     "popper.js": "^1.14.3",
     "rxjs": "^6.5.3",

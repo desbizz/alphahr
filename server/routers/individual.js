@@ -16,21 +16,21 @@ router.post('/individual', async (req, res)=>{
     }
 })
 
-router.patch('/individual/:id', async (req, res)=>{
-    try{
+// router.patch('/individual/:id', async (req, res)=>{
+//     try{
 
         
 
-     const individual = await Individual.findByIdAndUpdate(req.params.id, req.body, {new: true, runValidators: true})
-       await req.individual.save()
+//      const individual = await Individual.findByIdAndUpdate(req.params.id, req.body, {new: true, runValidators: true})
+//        await req.individual.save()
 
-        res.status(200).send(individual)
+//         res.status(200).send(individual)
 
-    }catch (e){
-        res.status(400).send(e)
+//     }catch (e){
+//         res.status(400).send(e)
 
-    }
-})
+//     }
+// })
 
 router.get('/individual', async (req, res)=>{
 
@@ -52,21 +52,35 @@ router.get('/individual', async (req, res)=>{
     }
 })
 
-router.get('/individual/:id', async (req, res)=>{
-    const _id = req.params.id
-    try{
-        const individual = await Individual.findOne({_id})
-
-        if(!individual){
-            return res.status(404).send({Error:'not found'})
-        }
-            res.status(200).send(individual)
-    }
+router.patch('/individual/:id',async (req, res)=>{
+  
    
-    catch (e){
-        return res.status(400).send(e)
-
+    try{
+      
+      const payment =  await Individual.findByIdAndUpdate(req.params.id, req.body, {new: true, runValidators: true})
+      console.log(payment)
+      // await req.payment.save()
+       res.status(200).send(payment)
+    }catch(e){
+        res.status(400).send(e)
     }
 })
+
+// router.get('/individual/:id', async (req, res)=>{
+//     const _id = req.params.id
+//     try{
+//         const individual = await Individual.findOne({_id})
+
+//         if(!individual){
+//             return res.status(404).send({Error:'not found'})
+//         }
+//             res.status(200).send(individual)
+//     }
+   
+//     catch (e){
+//         return res.status(400).send(e)
+
+//     }
+// })
 
 module.exports=router

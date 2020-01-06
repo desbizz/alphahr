@@ -1,19 +1,20 @@
 export class Individual {
+    _id: string;
     title: string;
     surname: string;
     firstname: string;
     othernames: string;
-    staffNumber: string;
-    recordNumber: string;
+    staffnumber: string;
+    recordnumber: string;
     email: string;
     allowances?: Allowances;
     deductions?: Deductions
-    acccounts?: Accounts;
-    jobs?: Jobs
+    acccounts?: Account;
+    jobs?: Job
 }
 
-export class Jobs {
-    hiredDate: Date;
+export class Job {
+    hiredDate: string;
     status?: string;
     totalMonth?: number;
     payableMonth?: number;
@@ -25,12 +26,12 @@ export class Jobs {
     division: string;
     classification: string;
     level: number;
-    step: string;
+    step: number;
     salaryName: string;
 
 }
 
-export class Accounts {
+export class Account {
  bankName: string;
  sortCode: string;
  pensionName:string;
