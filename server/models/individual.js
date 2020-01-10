@@ -29,7 +29,7 @@ const accountSchema = mongoose.Schema({
     accountNumber : String,
     sortCode: String,
     pensionName: String,
-    pensionAcount:String
+    pensionAccount:String
    
    })
    

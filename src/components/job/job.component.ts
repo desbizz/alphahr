@@ -34,7 +34,7 @@ export class JobComponent implements OnInit {
    
     this.individualService.UpdateStaff(this.may).subscribe(x => {
     });
-    this.toastr.success(this.individual.individual.firstname, ' is Updated');
+    this.toastr.success(this.may.firstname, ' is Updated');
   }
 
     

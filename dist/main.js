@@ -22,6 +22,28 @@ module.exports = "<form #f=\"ngForm\" (ngSubmit)=\"submit()\">\r\n    <div class
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./src/components/allowance/allowance.component.html":
+/*!*************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/components/allowance/allowance.component.html ***!
+  \*************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n<div class=\"col-xs-12\">\n    <p>Add new Allowance</p>\n    <label>Allowanve Name</label>\n    <input type=\"text\" class=\"form-control\" #name>\n    <Label>Amount</Label>\n    <input type=\"text\" class=\"form-control\" #amount>\n    <br>\n    <button class=\"btn btn primary\" (click)=\"onAddAllowance(name,amount)\">Add Allowance</button>\n</div>\n\n<div class=\"col-xs-12\">\n    <ul *ngFor=\"let i of allowance\">\n        <li>\n            {{i.name}}\n        </li>\n        <li>\n            {{i.amount}}\n        </li>\n        <button (click)=\"onRemoveAllowance(i.name)\">Remove</button>\n    </ul>\n</div>\n</div>"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/components/deduction/deduction.component.html":
+/*!*************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/components/deduction/deduction.component.html ***!
+  \*************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n    <div class=\"col-xs-12\">\n        <p>Add new Deduction</p>\n        <label>Deduction Name Name</label>\n        <input type=\"text\" class=\"form-control\" #name>\n        <Label>Amount</Label>\n        <input type=\"text\" class=\"form-control\" #amount>\n        <br>\n        <button class=\"btn btn primary\" (click)=\"onAddAllowance(name,amount)\">Add Deduction</button>\n    </div>\n    \n    <div class=\"col-xs-12\">\n        <ul *ngFor=\"let i of deduction\">\n            <li>\n                {{i.name}}\n            </li>\n            <li>\n                {{i.amount}}\n            </li>\n            <button (click)=\"onRemoveAllowance(i.name)\">Remove</button>\n        </ul>\n    </div>\n    </div>"
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./src/components/header/header.component.html":
 /*!*******************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/components/header/header.component.html ***!
@@ -73,7 +95,7 @@ module.exports = "<div [hidden]=\"!isDelayedRunning\" class=\"spinner\">  \r\n  
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div [routerLinkActive]=\"['link-active']\">\n    <a [routerLink]=\"['/editJob']\">\n        <span class='glyphicon glyphicon-edit'></span> Edit Job Details\n    </a>\n</div> \n<div [routerLinkActive]=\"['link-active']\">\n    <a [routerLink]=\"['/editaccount']\">\n        <span class='glyphicon glyphicon-edit'></span> Edit Account Details\n    </a>\n</div> \n"
+module.exports = "<div [routerLinkActive]=\"['link-active']\">\n    <a [routerLink]=\"['/editJob']\">\n        <span class='glyphicon glyphicon-edit'></span> Edit Job Details\n    </a>\n</div> \n<div [routerLinkActive]=\"['link-active']\">\n    <a [routerLink]=\"['/editaccount']\">\n        <span class='glyphicon glyphicon-edit'></span> Edit Account Details\n    </a>\n</div> \n<div [routerLinkActive]=\"['link-active']\">\n    <a [routerLink]=\"['/allowance']\">\n        <span class='glyphicon glyphicon-edit'></span> Edit Allowances\n    </a>\n</div> \n<div [routerLinkActive]=\"['link-active']\">\n    <a [routerLink]=\"['/deduction']\">\n        <span class='glyphicon glyphicon-edit'></span> Edit Deductions\n    </a>\n</div> \n"
 
 /***/ }),
 
@@ -186,12 +208,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_components_job_job_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! src/components/job/job.component */ "./src/components/job/job.component.ts");
 /* harmony import */ var src_components_account_account_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! src/components/account/account.component */ "./src/components/account/account.component.ts");
 /* harmony import */ var src_components_staff_page_staff_page_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! src/components/staff-page/staff-page.component */ "./src/components/staff-page/staff-page.component.ts");
+/* harmony import */ var src_components_allowance_allowance_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! src/components/allowance/allowance.component */ "./src/components/allowance/allowance.component.ts");
+/* harmony import */ var src_components_deduction_deduction_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! src/components/deduction/deduction.component */ "./src/components/deduction/deduction.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -223,6 +249,11 @@ var AppModule = /** @class */ (function () {
                 src_components_staff_page_staff_page_component__WEBPACK_IMPORTED_MODULE_16__["StaffPageComponent"],
                 src_components_login_login_component__WEBPACK_IMPORTED_MODULE_1__["LoginComponent"],
                 src_components_spinner_spinner_component__WEBPACK_IMPORTED_MODULE_0__["SpinnerComponent"],
+                src_components_allowance_allowance_component__WEBPACK_IMPORTED_MODULE_17__["AllowanceComponent"],
+                src_components_deduction_deduction_component__WEBPACK_IMPORTED_MODULE_18__["DeductionComponent"]
+                //  LoginFormComponent,
+                //   RegisterFormComponent,
+                //  UserService
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["BrowserModule"].withServerTransition({ appId: 'ng-cli-universal' }),
@@ -236,6 +267,8 @@ var AppModule = /** @class */ (function () {
                     { path: 'editJob', component: src_components_job_job_component__WEBPACK_IMPORTED_MODULE_14__["JobComponent"] },
                     { path: 'editaccount', component: src_components_account_account_component__WEBPACK_IMPORTED_MODULE_15__["AccountComponent"] },
                     { path: 'staff', component: src_components_staff_page_staff_page_component__WEBPACK_IMPORTED_MODULE_16__["StaffPageComponent"] },
+                    { path: 'allowance', component: src_components_allowance_allowance_component__WEBPACK_IMPORTED_MODULE_17__["AllowanceComponent"] },
+                    { path: 'deduction', component: src_components_deduction_deduction_component__WEBPACK_IMPORTED_MODULE_18__["DeductionComponent"] },
                     // { path: '',component: ListrechargeComponent, canActivate: [AuthGuard] },
                     { path: 'login', component: src_components_login_login_component__WEBPACK_IMPORTED_MODULE_1__["LoginComponent"] },
                 ])
@@ -297,21 +330,18 @@ var AccountComponent = /** @class */ (function () {
         this.individual = individual;
         this.toastr = toastr;
         this.individualService = individualService;
-        this.account = {};
+        this.account = [];
     }
     AccountComponent.prototype.ngOnInit = function () {
         this.may = this.individual.individual[0];
         if (this.may.account)
             this.account = this.may.account;
-        // this.setJob(this.may)
     };
     AccountComponent.prototype.submit = function () {
-        console.log(this.account);
         this.may.account = this.account;
-        console.log(this.may);
         this.individualService.UpdateStaff(this.may).subscribe(function (x) {
         });
-        this.toastr.success(this.individual.individual.firstname, ' is Updated');
+        this.toastr.success(this.may.firstname, ' is Updated');
     };
     AccountComponent.ctorParameters = function () { return [
         { type: src_app_app_component__WEBPACK_IMPORTED_MODULE_1__["AppComponent"] },
@@ -327,6 +357,190 @@ var AccountComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [src_app_app_component__WEBPACK_IMPORTED_MODULE_1__["AppComponent"], ngx_toastr__WEBPACK_IMPORTED_MODULE_2__["ToastrService"], src_services_individual_service__WEBPACK_IMPORTED_MODULE_3__["IndividualService"]])
     ], AccountComponent);
     return AccountComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/components/allowance/allowance.component.css":
+/*!**********************************************************!*\
+  !*** ./src/components/allowance/allowance.component.css ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvY29tcG9uZW50cy9hbGxvd2FuY2UvYWxsb3dhbmNlLmNvbXBvbmVudC5jc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/components/allowance/allowance.component.ts":
+/*!*********************************************************!*\
+  !*** ./src/components/allowance/allowance.component.ts ***!
+  \*********************************************************/
+/*! exports provided: AllowanceComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AllowanceComponent", function() { return AllowanceComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_app_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/app.component */ "./src/app/app.component.ts");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
+/* harmony import */ var src_services_individual_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/services/individual.service */ "./src/services/individual.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var AllowanceComponent = /** @class */ (function () {
+    function AllowanceComponent(individual, toastr, individualService) {
+        this.individual = individual;
+        this.toastr = toastr;
+        this.individualService = individualService;
+        this.allowanceCreated = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.allowance = [];
+    }
+    AllowanceComponent.prototype.ngOnInit = function () {
+        this.may = this.individual.individual[0];
+        if (this.may.allowances)
+            this.allowance = this.may.allowances;
+    };
+    AllowanceComponent.prototype.onAddAllowance = function (name, amount) {
+        this.allowance.push({ name: name.value, amount: amount.value });
+        console.log(this.allowance);
+        this.submit();
+    };
+    AllowanceComponent.prototype.onRemoveAllowance = function (name) {
+        var valueToRemove = [name];
+        var newArray = this.allowance.filter(function (item) {
+            return name != item.name;
+        });
+        console.log(newArray);
+        this.allowance = newArray;
+        this.submit();
+    };
+    AllowanceComponent.prototype.submit = function () {
+        this.may.allowances = this.allowance;
+        this.individualService.UpdateStaff(this.may).subscribe(function (x) {
+        });
+        this.toastr.success(this.may.firstname, ' is Updated');
+    };
+    AllowanceComponent.ctorParameters = function () { return [
+        { type: src_app_app_component__WEBPACK_IMPORTED_MODULE_1__["AppComponent"] },
+        { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_2__["ToastrService"] },
+        { type: src_services_individual_service__WEBPACK_IMPORTED_MODULE_3__["IndividualService"] }
+    ]; };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+        __metadata("design:type", Object)
+    ], AllowanceComponent.prototype, "allowanceCreated", void 0);
+    AllowanceComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-allowance',
+            template: __webpack_require__(/*! raw-loader!./allowance.component.html */ "./node_modules/raw-loader/index.js!./src/components/allowance/allowance.component.html"),
+            styles: [__webpack_require__(/*! ./allowance.component.css */ "./src/components/allowance/allowance.component.css")]
+        }),
+        __metadata("design:paramtypes", [src_app_app_component__WEBPACK_IMPORTED_MODULE_1__["AppComponent"], ngx_toastr__WEBPACK_IMPORTED_MODULE_2__["ToastrService"], src_services_individual_service__WEBPACK_IMPORTED_MODULE_3__["IndividualService"]])
+    ], AllowanceComponent);
+    return AllowanceComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/components/deduction/deduction.component.css":
+/*!**********************************************************!*\
+  !*** ./src/components/deduction/deduction.component.css ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvY29tcG9uZW50cy9kZWR1Y3Rpb24vZGVkdWN0aW9uLmNvbXBvbmVudC5jc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/components/deduction/deduction.component.ts":
+/*!*********************************************************!*\
+  !*** ./src/components/deduction/deduction.component.ts ***!
+  \*********************************************************/
+/*! exports provided: DeductionComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DeductionComponent", function() { return DeductionComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_app_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/app.component */ "./src/app/app.component.ts");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
+/* harmony import */ var src_services_individual_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/services/individual.service */ "./src/services/individual.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var DeductionComponent = /** @class */ (function () {
+    function DeductionComponent(individual, toastr, individualService) {
+        this.individual = individual;
+        this.toastr = toastr;
+        this.individualService = individualService;
+        this.deduction = [];
+    }
+    DeductionComponent.prototype.ngOnInit = function () {
+        this.may = this.individual.individual[0];
+        if (this.may.deductions)
+            this.deduction = this.may.deductions;
+    };
+    DeductionComponent.prototype.onAddAllowance = function (name, amount) {
+        this.deduction.push({ name: name.value, amount: amount.value });
+        this.submit();
+    };
+    DeductionComponent.prototype.onRemoveAllowance = function (name) {
+        var valueToRemove = [name];
+        var newArray = this.deduction.filter(function (item) {
+            return name != item.name;
+        });
+        console.log(newArray);
+        this.deduction = newArray;
+        this.submit();
+    };
+    DeductionComponent.prototype.submit = function () {
+        this.may.deductions = this.deduction;
+        this.individualService.UpdateStaff(this.may).subscribe(function (x) {
+        });
+        this.toastr.success(this.may.firstname, ' is Updated');
+    };
+    DeductionComponent.ctorParameters = function () { return [
+        { type: src_app_app_component__WEBPACK_IMPORTED_MODULE_1__["AppComponent"] },
+        { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_2__["ToastrService"] },
+        { type: src_services_individual_service__WEBPACK_IMPORTED_MODULE_3__["IndividualService"] }
+    ]; };
+    DeductionComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-deduction',
+            template: __webpack_require__(/*! raw-loader!./deduction.component.html */ "./node_modules/raw-loader/index.js!./src/components/deduction/deduction.component.html"),
+            styles: [__webpack_require__(/*! ./deduction.component.css */ "./src/components/deduction/deduction.component.css")]
+        }),
+        __metadata("design:paramtypes", [src_app_app_component__WEBPACK_IMPORTED_MODULE_1__["AppComponent"], ngx_toastr__WEBPACK_IMPORTED_MODULE_2__["ToastrService"], src_services_individual_service__WEBPACK_IMPORTED_MODULE_3__["IndividualService"]])
+    ], DeductionComponent);
+    return DeductionComponent;
 }());
 
 
@@ -463,14 +677,13 @@ var JobComponent = /** @class */ (function () {
         this.may = this.individual.individual[0];
         if (this.may.job)
             this.job = this.may.job;
-        console.log(this.job);
         // this.setJob(this.may)
     };
     JobComponent.prototype.submit = function () {
         this.may.job = this.job;
         this.individualService.UpdateStaff(this.may).subscribe(function (x) {
         });
-        this.toastr.success(this.individual.individual.firstname, ' is Updated');
+        this.toastr.success(this.may.firstname, ' is Updated');
     };
     JobComponent.ctorParameters = function () { return [
         { type: src_app_app_component__WEBPACK_IMPORTED_MODULE_1__["AppComponent"] },
@@ -715,8 +928,6 @@ var StaffPageComponent = /** @class */ (function () {
         this.individualService.getStaff(this.query).subscribe(function (result) {
             _this.individual.individual = result;
             _this.may = _this.individual.individual;
-            console.log(result);
-            console.log(_this.individual.individual);
         });
     };
     StaffPageComponent.ctorParameters = function () { return [

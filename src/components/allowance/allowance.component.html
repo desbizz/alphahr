@@ -1,1 +1,23 @@
-<p>allowance works!</p>
+<div class="row">
+<div class="col-xs-12">
+    <p>Add new Allowance</p>
+    <label>Allowanve Name</label>
+    <input type="text" class="form-control" #name>
+    <Label>Amount</Label>
+    <input type="text" class="form-control" #amount>
+    <br>
+    <button class="btn btn primary" (click)="onAddAllowance(name,amount)">Add Allowance</button>
+</div>
+
+<div class="col-xs-12">
+    <ul *ngFor="let i of allowance">
+        <li>
+            {{i.name}}
+        </li>
+        <li>
+            {{i.amount}}
+        </li>
+        <button (click)="onRemoveAllowance(i.name)">Remove</button>
+    </ul>
+</div>
+</div>
