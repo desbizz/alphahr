@@ -22,8 +22,8 @@ import { StaffComponent } from 'src/components/staff/staff.component';
 import { JobComponent } from 'src/components/job/job.component';
 import { AccountComponent } from 'src/components/account/account.component';
 import { StaffPageComponent } from 'src/components/staff-page/staff-page.component';
-import { AllowanceComponent } from 'src/components/allowance/allowance.component';
-import { DeductionComponent } from 'src/components/deduction/deduction.component';
+import { ConfigFormComponent } from 'src/components/config-form/config-form.component';
+import { ConfigPageComponent } from 'src/components/config-page/config-page.component';
 
 
 
@@ -39,9 +39,8 @@ import { DeductionComponent } from 'src/components/deduction/deduction.component
    
     LoginComponent,
     SpinnerComponent,
-    AllowanceComponent,
-    DeductionComponent
-    
+    ConfigFormComponent,
+    ConfigPageComponent
     
   //  LoginFormComponent,
  //   RegisterFormComponent,
@@ -60,8 +59,10 @@ import { DeductionComponent } from 'src/components/deduction/deduction.component
      { path: 'editJob', component: JobComponent },
      { path: 'editaccount', component: AccountComponent },
      { path: 'staff', component: StaffPageComponent },
-     { path: 'allowance', component: AllowanceComponent },
-     { path: 'deduction', component: DeductionComponent },
+     { path: 'allowance', component: StaffPageComponent },
+     { path: 'deduction', component: StaffPageComponent },
+     { path: 'addconfig', component: ConfigFormComponent },
+     { path: 'settings', component: ConfigPageComponent },
     
     // { path: '',component: ListrechargeComponent, canActivate: [AuthGuard] },
      { path: 'login', component: LoginComponent },
