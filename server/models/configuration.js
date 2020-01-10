@@ -1,34 +1,20 @@
 const mongoose = require('mongoose')
 
 const configurationSchema = mongoose.Schema({
-    bank:[{
+  
     name: {
         type: String,
         unique:true,
         required:true
-        }}],
-        allowance:[{
-            name: {
-                type: String,
-                unique:true,
-                required:true
-                }}],
-                classification:[{
-                    name: {
-                        type: String,
-                        unique:true,
-                        required:true
-                        }}]
+        },
+       values: {
+           type: Array,
+           unique: true
+       }
 
 })
 
-configurationSchema.pre('save', async function(next){
-    const configuration=this
 
-    
-    next()
-
-})
 
 
 
