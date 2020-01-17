@@ -14,10 +14,14 @@ export class ConfigurationsService {
   return this.http.post('/configuration', config );
   
   }
+
+  removeConfig(config){
+    return this.http.delete('/configuration/' + config);
+  }
   UpdateConfig(config) {
   
   
-    return this.http.get('/configuration/'+ config._id, config );
+    return this.http.patch('/configuration/'+ config._id, config );
     
     }
 

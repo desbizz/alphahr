@@ -9,8 +9,8 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./staff-page.component.css']
 })
 export class StaffPageComponent implements OnInit {
-  query :any =[];
-  may: any=[];
+  query :any ={};
+  may: any={};
 
   constructor(private route: ActivatedRoute,private individual:AppComponent, private individualService: IndividualService) {
     route.params.subscribe(p => {

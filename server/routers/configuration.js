@@ -18,7 +18,21 @@ router.patch('/configuration/:id', async (req, res)=>{
 
     }
 })
+router.delete('/configuration/:id', async (req, res)=>{
+    try{
 
+        
+
+       const configuration = await Configuration.findByIdAndDelete(req.params.id)
+    //  await req.configuration.save()
+
+        res.status(200).send(configuration)
+
+    }catch (e){
+        res.status(400).send(e)
+
+    }
+})
 router.post('/configuration', async (req, res)=>{
     const configuration = new Configuration(req.body)
     try{

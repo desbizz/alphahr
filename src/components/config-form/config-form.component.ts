@@ -3,6 +3,7 @@ import { AppComponent } from 'src/app/app.component';
 import { ToastrService } from 'ngx-toastr';
 import { IndividualService } from 'src/services/individual.service';
 import { ConfigurationsService } from 'src/services/configurations.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-config-form',
@@ -11,41 +12,62 @@ import { ConfigurationsService } from 'src/services/configurations.service';
 })
 export class ConfigFormComponent implements OnInit {
 
-  may:any
-  query:any
+  may:any={}
+  query:any={}
   config:any={};
- constructor(private individual:AppComponent, private toastr: ToastrService, private configService : ConfigurationsService) { }
+  configList:any[]=[];
+ constructor(private individual:AppComponent, private toastr: ToastrService, private configService : ConfigurationsService , route:ActivatedRoute, router: Router) { 
+   route.params.subscribe(p => {
+     this.query.name = p ['name'];
+   })
+ }
 
  ngOnInit() {
- // this.configService.getConfig(this.query).subscribe(result => {this.config = result;})
- 
-   
-   
+  
 
+ this.configService.getConfig(this.query).subscribe(result => {this.may = result[0]; 
+  if(this.may.values)
+  this.configList=this.may.values;
 
-  // this.setJob(this.may)
+  
+
+})
+  
+  
+   
   
  }
 
+ onRemoveconfig(name){
+
+ 
+  const newArray = this.configList.filter(function (item) {
+    return  name != item }) 
+     this.configList=newArray;
+     this.addConfig()
+
+} 
+
+addConfig(){
+  this.may.values=this.configList
+
+  this.configService.UpdateConfig(this.may).subscribe(x => {
+  });
+  this.toastr.success("Successfull", 'Created');
+}
  
 
- submit(){
+submit(){
+  this.configList.push(this.config.name)
+   console.log(this.configList)
 
+   this.addConfig()
 
-  if(this.config._id){
+ 
 
-   this.configService.UpdateConfig(this.config).subscribe(x => {
-   });
-   this.toastr.success("Successfull", 'Updated');
+this.config={}
+}
 
-  } else {
-    console.log(this.config)
-    this.configService.createConfig(this.config).subscribe(x => {
-    });
-    this.toastr.success("Successfull", 'Created');
-
-  }
- }
 
 
 }

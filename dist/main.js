@@ -22,25 +22,25 @@ module.exports = "<form #f=\"ngForm\" (ngSubmit)=\"submit()\">\r\n    <div class
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/index.js!./src/components/allowance/allowance.component.html":
-/*!*************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/components/allowance/allowance.component.html ***!
-  \*************************************************************************************/
+/***/ "./node_modules/raw-loader/index.js!./src/components/config-form/config-form.component.html":
+/*!*****************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/components/config-form/config-form.component.html ***!
+  \*****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n<div class=\"col-xs-12\">\n    <p>Add new Allowance</p>\n    <label>Allowanve Name</label>\n    <input type=\"text\" class=\"form-control\" #name>\n    <Label>Amount</Label>\n    <input type=\"text\" class=\"form-control\" #amount>\n    <br>\n    <button class=\"btn btn primary\" (click)=\"onAddAllowance(name,amount)\">Add Allowance</button>\n</div>\n\n<div class=\"col-xs-12\">\n    <ul *ngFor=\"let i of allowance\">\n        <li>\n            {{i.name}}\n        </li>\n        <li>\n            {{i.amount}}\n        </li>\n        <button (click)=\"onRemoveAllowance(i.name)\">Remove</button>\n    </ul>\n</div>\n</div>"
+module.exports = "<form #f=\"ngForm\" (ngSubmit)=\"submit()\">\r\n \r\n    <div class=\"form-group row\">\r\n      <label for=\"accountNumber\" class=\"col-sm-2 col-form-label\">Name</label>\r\n      <div class=\"col-sm-10\">\r\n        <input type=\"text\" class=\"form-control\" id=\"name\" name=\"name\" [(ngModel)]=\"config.name\" placeholder=\"\">\r\n      </div>\r\n    </div>   \r\n   \r\n            \r\n                          <button>Save</button>\r\n  </form>\r\n\r\n  <br>\r\n<ul *ngFor=\"let i of configList\">\r\n  <li>\r\n    <a [routerLink]=\"['/addconfig/',i]\"> <h3>{{i}} </h3> </a>\r\n      <button (click)=\"onRemoveconfig(i)\">Remove</button>\r\n \r\n  </li>\r\n \r\n  \r\n</ul>"
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/index.js!./src/components/deduction/deduction.component.html":
-/*!*************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/components/deduction/deduction.component.html ***!
-  \*************************************************************************************/
+/***/ "./node_modules/raw-loader/index.js!./src/components/config-page/config-page.component.html":
+/*!*****************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/components/config-page/config-page.component.html ***!
+  \*****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n    <div class=\"col-xs-12\">\n        <p>Add new Deduction</p>\n        <label>Deduction Name Name</label>\n        <input type=\"text\" class=\"form-control\" #name>\n        <Label>Amount</Label>\n        <input type=\"text\" class=\"form-control\" #amount>\n        <br>\n        <button class=\"btn btn primary\" (click)=\"onAddAllowance(name,amount)\">Add Deduction</button>\n    </div>\n    \n    <div class=\"col-xs-12\">\n        <ul *ngFor=\"let i of deduction\">\n            <li>\n                {{i.name}}\n            </li>\n            <li>\n                {{i.amount}}\n            </li>\n            <button (click)=\"onRemoveAllowance(i.name)\">Remove</button>\n        </ul>\n    </div>\n    </div>"
+module.exports = "<form #f=\"ngForm\" (ngSubmit)=\"submit(name)\">\r\n  <div class=\"form-group row\">\r\n    <label for=\"banknName\" class=\"col-sm-2 col-form-label\">Configuration Name</label>\r\n    <div class=\"col-sm-10\">\r\n      <input type=\"text\"  class=\"form-control\" id=\"name\" name=\"name\" [(ngModel)]=\"config.name\" placeholder=\"name\">\r\n    </div>\r\n  </div>\r\n \r\n \r\n          \r\n     <button>Add New Settings</button>                   \r\n</form>\r\n\r\n<br>\r\n<ul *ngFor=\"let i of configList\">\r\n  <li>\r\n    <a [routerLink]=\"['/addconfig/',i.name]\"> <h3>{{i.name}} </h3> </a>\r\n      <button (click)=\"onRemoveconfig(i._id,i.name)\">Remove</button>\r\n \r\n  </li>\r\n \r\n  \r\n</ul>"
 
 /***/ }),
 
@@ -106,7 +106,7 @@ module.exports = "<div [routerLinkActive]=\"['link-active']\">\n    <a [routerLi
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 *ngIf=\"!individual.id\">Add New Staff</h1>\r\n<h1 *ngIf=\"individual.id\">Edit Staff</h1>\r\n\r\n<form #f=\"ngForm\" (ngSubmit)=\"submit()\">\r\n        <div class=\"form-group row\">\r\n          <label for=\"surname\" class=\"col-sm-2 col-form-label\">Surname</label>\r\n          <div class=\"col-sm-10\">\r\n            <input type=\"text\"  class=\"form-control\" id=\"surname\" name=\"surname\" [(ngModel)]=\"individual.surname\" placeholder=\"surname\">\r\n          </div>\r\n        </div>\r\n        <div class=\"form-group row\">\r\n          <label for=\"firstname\" class=\"col-sm-2 col-form-label\">Firstname</label>\r\n          <div class=\"col-sm-10\">\r\n            <input type=\"text\" class=\"form-control\" id=\"firstname\" name=\"firstname\" [(ngModel)]=\"individual.firstname\" placeholder=\"firstname\">\r\n          </div>\r\n        </div>\r\n        <div class=\"form-group row\">\r\n                <label for=\"othernames\" class=\"col-sm-2 col-form-label\">Othernames</label>\r\n                <div class=\"col-sm-10\">\r\n                  <input type=\"text\" class=\"form-control\" id=\"firstname\" name=\"othernames\" [(ngModel)]=\"individual.othernames\" placeholder=\"othernames\">\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group row\">\r\n                    <label for=\"staffNumber\" class=\"col-sm-2 col-form-label\">Staff number</label>\r\n                    <div class=\"col-sm-10\">\r\n                      <input type=\"text\" class=\"form-control\" id=\"staffnumber\" name=\"staffnumber\" [(ngModel)]=\"individual.staffnumber\" placeholder=\"Staff number\">\r\n                    </div>\r\n                  </div>\r\n                  <div class=\"form-group row\">\r\n                        <label for=\"recordNumber\" class=\"col-sm-2 col-form-label\">Establishment number</label>\r\n                        <div class=\"col-sm-10\">\r\n                          <input type=\"text\" class=\"form-control\" id=\"recordnumber\" name=\"recordnumber\" [(ngModel)]=\"individual.recordnumber\" placeholder=\"Record number\">\r\n                        </div>\r\n                      </div>\r\n                      <div class=\"form-group row\">\r\n                            <label for=\"firstname\" class=\"col-sm-2 col-form-label\">Email</label>\r\n                            <div class=\"col-sm-10\">\r\n                              <input type=\"text\" class=\"form-control\" id=\"email\" name=\"email\" [(ngModel)]=\"individual.email\" placeholder=\"example@example.com\">\r\n                            </div>\r\n                          </div>\r\n                          <div class=\"form-group row\">\r\n                                <label for=\"firstname\" class=\"col-sm-2 col-form-label\">Birth date</label>\r\n                                <div class=\"col-sm-10\">\r\n                                  <input type=\"text\" class=\"form-control\" id=\"dob\" name=\"dob\" [(ngModel)]=\"individual.dob\" placeholder=\"Date of Birth\">\r\n                                </div>\r\n                              </div>\r\n\r\n                              <button>Save</button>\r\n      </form>\r\n"
+module.exports = "<h1 *ngIf=\"!individual.id\">Add New Staff</h1>\r\n<h1 *ngIf=\"individual.id\">Edit Staff</h1>\r\n\r\n<form #f=\"ngForm\" (ngSubmit)=\"submit()\">\r\n         \r\n        <div class=\"form-group row\">\r\n          <label for=\"surname\" class=\"col-sm-2 col-form-label\">Surname</label>\r\n          <div class=\"col-sm-10\">\r\n            <input type=\"text\"  class=\"form-control\" id=\"surname\" name=\"surname\" [(ngModel)]=\"individual.surname\" placeholder=\"surname\">\r\n          </div>\r\n        </div>\r\n        <div class=\"form-group row\">\r\n          <label for=\"firstname\" class=\"col-sm-2 col-form-label\">Firstname</label>\r\n          <div class=\"col-sm-10\">\r\n            <input type=\"text\" class=\"form-control\" id=\"firstname\" name=\"firstname\" [(ngModel)]=\"individual.firstname\" placeholder=\"firstname\">\r\n          </div>\r\n        </div>\r\n        <div class=\"form-group row\">\r\n                <label for=\"othernames\" class=\"col-sm-2 col-form-label\">Othernames</label>\r\n                <div class=\"col-sm-10\">\r\n                  <input type=\"text\" class=\"form-control\" id=\"firstname\" name=\"othernames\" [(ngModel)]=\"individual.othernames\" placeholder=\"othernames\">\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group row\">\r\n                    <label for=\"staffNumber\" class=\"col-sm-2 col-form-label\">Staff number</label>\r\n                    <div class=\"col-sm-10\">\r\n                      <input type=\"text\" class=\"form-control\" id=\"staffnumber\" name=\"staffnumber\" [(ngModel)]=\"individual.staffnumber\" placeholder=\"Staff number\">\r\n                    </div>\r\n                  </div>\r\n                  <div class=\"form-group row\">\r\n                        <label for=\"recordNumber\" class=\"col-sm-2 col-form-label\">Establishment number</label>\r\n                        <div class=\"col-sm-10\">\r\n                          <input type=\"text\" class=\"form-control\" id=\"recordnumber\" name=\"recordnumber\" [(ngModel)]=\"individual.recordnumber\" placeholder=\"Record number\">\r\n                        </div>\r\n                      </div>\r\n                      <div class=\"form-group row\">\r\n                            <label for=\"firstname\" class=\"col-sm-2 col-form-label\">Email</label>\r\n                            <div class=\"col-sm-10\">\r\n                              <input type=\"text\" class=\"form-control\" id=\"email\" name=\"email\" [(ngModel)]=\"individual.email\" placeholder=\"example@example.com\">\r\n                            </div>\r\n                          </div>\r\n                          <div class=\"form-group row\">\r\n                                <label for=\"firstname\" class=\"col-sm-2 col-form-label\">Birth date</label>\r\n                                <div class=\"col-sm-10\">\r\n                                  <input type=\"text\" class=\"form-control\" id=\"dob\" name=\"dob\" [(ngModel)]=\"individual.dob\" placeholder=\"Date of Birth\">\r\n                                </div>\r\n                              </div>\r\n\r\n                              <button>Save</button>\r\n      </form>\r\n"
 
 /***/ }),
 
@@ -208,8 +208,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_components_job_job_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! src/components/job/job.component */ "./src/components/job/job.component.ts");
 /* harmony import */ var src_components_account_account_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! src/components/account/account.component */ "./src/components/account/account.component.ts");
 /* harmony import */ var src_components_staff_page_staff_page_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! src/components/staff-page/staff-page.component */ "./src/components/staff-page/staff-page.component.ts");
-/* harmony import */ var src_components_allowance_allowance_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! src/components/allowance/allowance.component */ "./src/components/allowance/allowance.component.ts");
-/* harmony import */ var src_components_deduction_deduction_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! src/components/deduction/deduction.component */ "./src/components/deduction/deduction.component.ts");
+/* harmony import */ var src_components_config_form_config_form_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! src/components/config-form/config-form.component */ "./src/components/config-form/config-form.component.ts");
+/* harmony import */ var src_components_config_page_config_page_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! src/components/config-page/config-page.component */ "./src/components/config-page/config-page.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -249,8 +249,8 @@ var AppModule = /** @class */ (function () {
                 src_components_staff_page_staff_page_component__WEBPACK_IMPORTED_MODULE_16__["StaffPageComponent"],
                 src_components_login_login_component__WEBPACK_IMPORTED_MODULE_1__["LoginComponent"],
                 src_components_spinner_spinner_component__WEBPACK_IMPORTED_MODULE_0__["SpinnerComponent"],
-                src_components_allowance_allowance_component__WEBPACK_IMPORTED_MODULE_17__["AllowanceComponent"],
-                src_components_deduction_deduction_component__WEBPACK_IMPORTED_MODULE_18__["DeductionComponent"]
+                src_components_config_form_config_form_component__WEBPACK_IMPORTED_MODULE_17__["ConfigFormComponent"],
+                src_components_config_page_config_page_component__WEBPACK_IMPORTED_MODULE_18__["ConfigPageComponent"]
                 //  LoginFormComponent,
                 //   RegisterFormComponent,
                 //  UserService
@@ -267,8 +267,10 @@ var AppModule = /** @class */ (function () {
                     { path: 'editJob', component: src_components_job_job_component__WEBPACK_IMPORTED_MODULE_14__["JobComponent"] },
                     { path: 'editaccount', component: src_components_account_account_component__WEBPACK_IMPORTED_MODULE_15__["AccountComponent"] },
                     { path: 'staff', component: src_components_staff_page_staff_page_component__WEBPACK_IMPORTED_MODULE_16__["StaffPageComponent"] },
-                    { path: 'allowance', component: src_components_allowance_allowance_component__WEBPACK_IMPORTED_MODULE_17__["AllowanceComponent"] },
-                    { path: 'deduction', component: src_components_deduction_deduction_component__WEBPACK_IMPORTED_MODULE_18__["DeductionComponent"] },
+                    { path: 'allowance', component: src_components_staff_page_staff_page_component__WEBPACK_IMPORTED_MODULE_16__["StaffPageComponent"] },
+                    { path: 'deduction', component: src_components_staff_page_staff_page_component__WEBPACK_IMPORTED_MODULE_16__["StaffPageComponent"] },
+                    { path: 'addconfig/:name', component: src_components_config_form_config_form_component__WEBPACK_IMPORTED_MODULE_17__["ConfigFormComponent"] },
+                    { path: 'settings', component: src_components_config_page_config_page_component__WEBPACK_IMPORTED_MODULE_18__["ConfigPageComponent"] },
                     // { path: '',component: ListrechargeComponent, canActivate: [AuthGuard] },
                     { path: 'login', component: src_components_login_login_component__WEBPACK_IMPORTED_MODULE_1__["LoginComponent"] },
                 ])
@@ -363,31 +365,32 @@ var AccountComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/components/allowance/allowance.component.css":
-/*!**********************************************************!*\
-  !*** ./src/components/allowance/allowance.component.css ***!
-  \**********************************************************/
+/***/ "./src/components/config-form/config-form.component.css":
+/*!**************************************************************!*\
+  !*** ./src/components/config-form/config-form.component.css ***!
+  \**************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvY29tcG9uZW50cy9hbGxvd2FuY2UvYWxsb3dhbmNlLmNvbXBvbmVudC5jc3MifQ== */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvY29tcG9uZW50cy9jb25maWctZm9ybS9jb25maWctZm9ybS5jb21wb25lbnQuY3NzIn0= */"
 
 /***/ }),
 
-/***/ "./src/components/allowance/allowance.component.ts":
-/*!*********************************************************!*\
-  !*** ./src/components/allowance/allowance.component.ts ***!
-  \*********************************************************/
-/*! exports provided: AllowanceComponent */
+/***/ "./src/components/config-form/config-form.component.ts":
+/*!*************************************************************!*\
+  !*** ./src/components/config-form/config-form.component.ts ***!
+  \*************************************************************/
+/*! exports provided: ConfigFormComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AllowanceComponent", function() { return AllowanceComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConfigFormComponent", function() { return ConfigFormComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var src_app_app_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/app.component */ "./src/app/app.component.ts");
 /* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
-/* harmony import */ var src_services_individual_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/services/individual.service */ "./src/services/individual.service.ts");
+/* harmony import */ var src_services_configurations_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/services/configurations.service */ "./src/services/configurations.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -401,88 +404,94 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-var AllowanceComponent = /** @class */ (function () {
-    function AllowanceComponent(individual, toastr, individualService) {
+
+var ConfigFormComponent = /** @class */ (function () {
+    function ConfigFormComponent(individual, toastr, configService, route, router) {
+        var _this = this;
         this.individual = individual;
         this.toastr = toastr;
-        this.individualService = individualService;
-        this.allowanceCreated = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
-        this.allowance = [];
+        this.configService = configService;
+        this.may = {};
+        this.query = {};
+        this.config = {};
+        this.configList = [];
+        route.params.subscribe(function (p) {
+            _this.query.name = p['name'];
+        });
     }
-    AllowanceComponent.prototype.ngOnInit = function () {
-        this.may = this.individual.individual[0];
-        if (this.may.allowances)
-            this.allowance = this.may.allowances;
-    };
-    AllowanceComponent.prototype.onAddAllowance = function (name, amount) {
-        this.allowance.push({ name: name.value, amount: amount.value });
-        console.log(this.allowance);
-        this.submit();
-    };
-    AllowanceComponent.prototype.onRemoveAllowance = function (name) {
-        var valueToRemove = [name];
-        var newArray = this.allowance.filter(function (item) {
-            return name != item.name;
+    ConfigFormComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.configService.getConfig(this.query).subscribe(function (result) {
+            _this.may = result[0];
+            if (_this.may.values)
+                _this.configList = _this.may.values;
         });
-        console.log(newArray);
-        this.allowance = newArray;
-        this.submit();
     };
-    AllowanceComponent.prototype.submit = function () {
-        this.may.allowances = this.allowance;
-        this.individualService.UpdateStaff(this.may).subscribe(function (x) {
+    ConfigFormComponent.prototype.onRemoveconfig = function (name) {
+        var newArray = this.configList.filter(function (item) {
+            return name != item;
         });
-        this.toastr.success(this.may.firstname, ' is Updated');
+        this.configList = newArray;
+        this.addConfig();
     };
-    AllowanceComponent.ctorParameters = function () { return [
+    ConfigFormComponent.prototype.addConfig = function () {
+        this.may.values = this.configList;
+        this.configService.UpdateConfig(this.may).subscribe(function (x) {
+        });
+        this.toastr.success("Successfull", 'Created');
+    };
+    ConfigFormComponent.prototype.submit = function () {
+        this.configList.push(this.config.name);
+        console.log(this.configList);
+        this.addConfig();
+        this.config = {};
+    };
+    ConfigFormComponent.ctorParameters = function () { return [
         { type: src_app_app_component__WEBPACK_IMPORTED_MODULE_1__["AppComponent"] },
         { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_2__["ToastrService"] },
-        { type: src_services_individual_service__WEBPACK_IMPORTED_MODULE_3__["IndividualService"] }
+        { type: src_services_configurations_service__WEBPACK_IMPORTED_MODULE_3__["ConfigurationsService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] }
     ]; };
-    __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
-        __metadata("design:type", Object)
-    ], AllowanceComponent.prototype, "allowanceCreated", void 0);
-    AllowanceComponent = __decorate([
+    ConfigFormComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-allowance',
-            template: __webpack_require__(/*! raw-loader!./allowance.component.html */ "./node_modules/raw-loader/index.js!./src/components/allowance/allowance.component.html"),
-            styles: [__webpack_require__(/*! ./allowance.component.css */ "./src/components/allowance/allowance.component.css")]
+            selector: 'app-config-form',
+            template: __webpack_require__(/*! raw-loader!./config-form.component.html */ "./node_modules/raw-loader/index.js!./src/components/config-form/config-form.component.html"),
+            styles: [__webpack_require__(/*! ./config-form.component.css */ "./src/components/config-form/config-form.component.css")]
         }),
-        __metadata("design:paramtypes", [src_app_app_component__WEBPACK_IMPORTED_MODULE_1__["AppComponent"], ngx_toastr__WEBPACK_IMPORTED_MODULE_2__["ToastrService"], src_services_individual_service__WEBPACK_IMPORTED_MODULE_3__["IndividualService"]])
-    ], AllowanceComponent);
-    return AllowanceComponent;
+        __metadata("design:paramtypes", [src_app_app_component__WEBPACK_IMPORTED_MODULE_1__["AppComponent"], ngx_toastr__WEBPACK_IMPORTED_MODULE_2__["ToastrService"], src_services_configurations_service__WEBPACK_IMPORTED_MODULE_3__["ConfigurationsService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])
+    ], ConfigFormComponent);
+    return ConfigFormComponent;
 }());
 
 
 
 /***/ }),
 
-/***/ "./src/components/deduction/deduction.component.css":
-/*!**********************************************************!*\
-  !*** ./src/components/deduction/deduction.component.css ***!
-  \**********************************************************/
+/***/ "./src/components/config-page/config-page.component.css":
+/*!**************************************************************!*\
+  !*** ./src/components/config-page/config-page.component.css ***!
+  \**************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvY29tcG9uZW50cy9kZWR1Y3Rpb24vZGVkdWN0aW9uLmNvbXBvbmVudC5jc3MifQ== */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvY29tcG9uZW50cy9jb25maWctcGFnZS9jb25maWctcGFnZS5jb21wb25lbnQuY3NzIn0= */"
 
 /***/ }),
 
-/***/ "./src/components/deduction/deduction.component.ts":
-/*!*********************************************************!*\
-  !*** ./src/components/deduction/deduction.component.ts ***!
-  \*********************************************************/
-/*! exports provided: DeductionComponent */
+/***/ "./src/components/config-page/config-page.component.ts":
+/*!*************************************************************!*\
+  !*** ./src/components/config-page/config-page.component.ts ***!
+  \*************************************************************/
+/*! exports provided: ConfigPageComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DeductionComponent", function() { return DeductionComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConfigPageComponent", function() { return ConfigPageComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var src_app_app_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/app.component */ "./src/app/app.component.ts");
-/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
-/* harmony import */ var src_services_individual_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/services/individual.service */ "./src/services/individual.service.ts");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
+/* harmony import */ var src_services_configurations_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/services/configurations.service */ "./src/services/configurations.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -495,52 +504,51 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
-var DeductionComponent = /** @class */ (function () {
-    function DeductionComponent(individual, toastr, individualService) {
-        this.individual = individual;
+var ConfigPageComponent = /** @class */ (function () {
+    function ConfigPageComponent(toastr, configService) {
         this.toastr = toastr;
-        this.individualService = individualService;
-        this.deduction = [];
+        this.configService = configService;
+        this.config = {};
+        this.configList = [];
     }
-    DeductionComponent.prototype.ngOnInit = function () {
-        this.may = this.individual.individual[0];
-        if (this.may.deductions)
-            this.deduction = this.may.deductions;
+    ConfigPageComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.configService.getConfig(this.query).subscribe(function (result) {
+            _this.configList = result;
+            console.log(_this.configList);
+        });
     };
-    DeductionComponent.prototype.onAddAllowance = function (name, amount) {
-        this.deduction.push({ name: name.value, amount: amount.value });
-        this.submit();
-    };
-    DeductionComponent.prototype.onRemoveAllowance = function (name) {
-        var valueToRemove = [name];
-        var newArray = this.deduction.filter(function (item) {
+    ConfigPageComponent.prototype.onRemoveconfig = function (id, name) {
+        var _this = this;
+        this.configService.removeConfig(id).subscribe(function (x) {
+            _this.toastr.success("Deleted");
+        });
+        var newArray = this.configList.filter(function (item) {
             return name != item.name;
         });
-        console.log(newArray);
-        this.deduction = newArray;
-        this.submit();
+        this.configList = newArray;
     };
-    DeductionComponent.prototype.submit = function () {
-        this.may.deductions = this.deduction;
-        this.individualService.UpdateStaff(this.may).subscribe(function (x) {
+    ConfigPageComponent.prototype.submit = function () {
+        this.configList.push(this.config);
+        console.log(this.config);
+        this.configService.createConfig(this.config).subscribe(function (x) {
         });
-        this.toastr.success(this.may.firstname, ' is Updated');
+        this.toastr.success("Successfull", 'Created');
+        this.config = {};
     };
-    DeductionComponent.ctorParameters = function () { return [
-        { type: src_app_app_component__WEBPACK_IMPORTED_MODULE_1__["AppComponent"] },
-        { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_2__["ToastrService"] },
-        { type: src_services_individual_service__WEBPACK_IMPORTED_MODULE_3__["IndividualService"] }
+    ConfigPageComponent.ctorParameters = function () { return [
+        { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_1__["ToastrService"] },
+        { type: src_services_configurations_service__WEBPACK_IMPORTED_MODULE_2__["ConfigurationsService"] }
     ]; };
-    DeductionComponent = __decorate([
+    ConfigPageComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-deduction',
-            template: __webpack_require__(/*! raw-loader!./deduction.component.html */ "./node_modules/raw-loader/index.js!./src/components/deduction/deduction.component.html"),
-            styles: [__webpack_require__(/*! ./deduction.component.css */ "./src/components/deduction/deduction.component.css")]
+            selector: 'app-config-page',
+            template: __webpack_require__(/*! raw-loader!./config-page.component.html */ "./node_modules/raw-loader/index.js!./src/components/config-page/config-page.component.html"),
+            styles: [__webpack_require__(/*! ./config-page.component.css */ "./src/components/config-page/config-page.component.css")]
         }),
-        __metadata("design:paramtypes", [src_app_app_component__WEBPACK_IMPORTED_MODULE_1__["AppComponent"], ngx_toastr__WEBPACK_IMPORTED_MODULE_2__["ToastrService"], src_services_individual_service__WEBPACK_IMPORTED_MODULE_3__["IndividualService"]])
-    ], DeductionComponent);
-    return DeductionComponent;
+        __metadata("design:paramtypes", [ngx_toastr__WEBPACK_IMPORTED_MODULE_1__["ToastrService"], src_services_configurations_service__WEBPACK_IMPORTED_MODULE_2__["ConfigurationsService"]])
+    ], ConfigPageComponent);
+    return ConfigPageComponent;
 }());
 
 
@@ -916,8 +924,8 @@ var StaffPageComponent = /** @class */ (function () {
         this.route = route;
         this.individual = individual;
         this.individualService = individualService;
-        this.query = [];
-        this.may = [];
+        this.query = {};
+        this.may = {};
         route.params.subscribe(function (p) {
             //this.job.id = +p['id'];
         });
@@ -974,6 +982,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var src_services_individual_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/services/individual.service */ "./src/services/individual.service.ts");
 /* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
+/* harmony import */ var src_services_configurations_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/services/configurations.service */ "./src/services/configurations.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -986,9 +995,11 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var StaffComponent = /** @class */ (function () {
-    function StaffComponent(individualService, toastr) {
+    function StaffComponent(individualService, configService, toastr) {
         this.individualService = individualService;
+        this.configService = configService;
         this.toastr = toastr;
         this.individual = {
             _id: "",
@@ -1000,8 +1011,22 @@ var StaffComponent = /** @class */ (function () {
             recordnumber: "",
             email: ""
         };
+        this.query = {};
+        this.may = [];
+        this.title = {};
     }
     StaffComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.configService.getConfig(this.query).subscribe(function (result) {
+            _this.may = result;
+            console.log(_this.may);
+            var newArray = _this.may.filter(function (item) {
+                return "Title" == item.name;
+            });
+            _this.title = newArray;
+            console.log(_this.title);
+            console.log(newArray);
+        });
     };
     StaffComponent.prototype.submit = function () {
         this.individualService.createStaff(this.individual).subscribe(function (x) {
@@ -1010,6 +1035,7 @@ var StaffComponent = /** @class */ (function () {
     };
     StaffComponent.ctorParameters = function () { return [
         { type: src_services_individual_service__WEBPACK_IMPORTED_MODULE_1__["IndividualService"] },
+        { type: src_services_configurations_service__WEBPACK_IMPORTED_MODULE_3__["ConfigurationsService"] },
         { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_2__["ToastrService"] }
     ]; };
     StaffComponent = __decorate([
@@ -1018,7 +1044,7 @@ var StaffComponent = /** @class */ (function () {
             template: __webpack_require__(/*! raw-loader!./staff.component.html */ "./node_modules/raw-loader/index.js!./src/components/staff/staff.component.html"),
             styles: [__webpack_require__(/*! ./staff.component.css */ "./src/components/staff/staff.component.css")]
         }),
-        __metadata("design:paramtypes", [src_services_individual_service__WEBPACK_IMPORTED_MODULE_1__["IndividualService"], ngx_toastr__WEBPACK_IMPORTED_MODULE_2__["ToastrService"]])
+        __metadata("design:paramtypes", [src_services_individual_service__WEBPACK_IMPORTED_MODULE_1__["IndividualService"], src_services_configurations_service__WEBPACK_IMPORTED_MODULE_3__["ConfigurationsService"], ngx_toastr__WEBPACK_IMPORTED_MODULE_2__["ToastrService"]])
     ], StaffComponent);
     return StaffComponent;
 }());
@@ -1205,6 +1231,70 @@ var BasicAuthInterceptor = /** @class */ (function () {
         __metadata("design:paramtypes", [_authenticated_service__WEBPACK_IMPORTED_MODULE_1__["AuthenticationService"]])
     ], BasicAuthInterceptor);
     return BasicAuthInterceptor;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/services/configurations.service.ts":
+/*!************************************************!*\
+  !*** ./src/services/configurations.service.ts ***!
+  \************************************************/
+/*! exports provided: ConfigurationsService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConfigurationsService", function() { return ConfigurationsService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ConfigurationsService = /** @class */ (function () {
+    function ConfigurationsService(http) {
+        this.http = http;
+    }
+    ConfigurationsService.prototype.createConfig = function (config) {
+        return this.http.post('/configuration', config);
+    };
+    ConfigurationsService.prototype.removeConfig = function (config) {
+        return this.http.delete('/configuration/' + config);
+    };
+    ConfigurationsService.prototype.UpdateConfig = function (config) {
+        return this.http.patch('/configuration/' + config._id, config);
+    };
+    ConfigurationsService.prototype.getConfig = function (filter) {
+        return this.http.get('/configuration' + '?' + this.toQueryString(filter));
+    };
+    ConfigurationsService.prototype.toQueryString = function (obj) {
+        var parts = [];
+        for (var property in obj) {
+            var value = obj[property];
+            if (value != null && value != undefined && value != 'NaN' && value != null)
+                parts.push(encodeURIComponent(property) + '=' + encodeURIComponent(value));
+        }
+        return parts.join('&');
+    };
+    ConfigurationsService.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
+    ]; };
+    ConfigurationsService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+    ], ConfigurationsService);
+    return ConfigurationsService;
 }());
 
 

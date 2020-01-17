@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppComponent } from 'src/app/app.component';
 import { ToastrService } from 'ngx-toastr';
-import { IndividualService } from 'src/services/individual.service';
+import { ConfigurationsService } from 'src/services/configurations.service';
 
 @Component({
   selector: 'app-config-page',
@@ -11,32 +11,44 @@ import { IndividualService } from 'src/services/individual.service';
 export class ConfigPageComponent implements OnInit {
 
   may:any
-  account:any={}
- constructor(private individual:AppComponent, private toastr: ToastrService, private individualService : IndividualService) { }
+  query:any
+  config:any={};
+  configList:any=[];
+ constructor(private toastr: ToastrService, private configService : ConfigurationsService) { }
 
  ngOnInit() {
-   this.may=this.individual.individual[0]
-   if(this.may.account)
-   this.account=this.may.account
+ this.configService.getConfig(this.query).subscribe(result => {this.configList = result;
+   console.log(this.configList);
+})
 
-   
-
-
-  // this.setJob(this.may)
-  
  }
 
- 
+ onRemoveconfig(id,name){
+
+  this.configService.removeConfig(id).subscribe(x => {
+    this.toastr.success("Deleted"); 
+  });
+
+  const newArray = this.configList.filter(function (item) {
+    return  name != item.name }) 
+     this.configList=newArray;
+
+} 
 
  submit(){
+  this.configList.push(this.config)
+   console.log(this.config)
+
+  this.configService.createConfig(this.config).subscribe(x => {
+  });
+  this.toastr.success("Successfull", 'Created');
+
+this.config={}
+}
 
 
-   this.may.account=this.account
 
-   this.individualService.UpdateStaff(this.may).subscribe(x => {
-   });
-   this.toastr.success(this.individual.individual.firstname, ' is Updated');
- }
+
 
 
 }

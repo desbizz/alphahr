@@ -61,7 +61,7 @@ import { ConfigPageComponent } from 'src/components/config-page/config-page.comp
      { path: 'staff', component: StaffPageComponent },
      { path: 'allowance', component: StaffPageComponent },
      { path: 'deduction', component: StaffPageComponent },
-     { path: 'addconfig', component: ConfigFormComponent },
+     { path: 'addconfig/:name', component: ConfigFormComponent },
      { path: 'settings', component: ConfigPageComponent },
     
     // { path: '',component: ListrechargeComponent, canActivate: [AuthGuard] },

@@ -1,17 +1,23 @@
-<form #f="ngForm" (ngSubmit)="submit()">
-    <div class="form-group row">
-      <label for="banknName" class="col-sm-2 col-form-label">Configuration Name</label>
-      <div class="col-sm-10">
-        <input type="text"  class="form-control" id="name" name="name" [(ngModel)]="config.name" placeholder="name">
-      </div>
+<form #f="ngForm" (ngSubmit)="submit(name)">
+  <div class="form-group row">
+    <label for="banknName" class="col-sm-2 col-form-label">Configuration Name</label>
+    <div class="col-sm-10">
+      <input type="text"  class="form-control" id="name" name="name" [(ngModel)]="config.name" placeholder="name">
     </div>
-    <div class="form-group row">
-      <label for="accountNumber" class="col-sm-2 col-form-label">Name</label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" id="value" name="value" [(ngModel)]="config.value" placeholder="">
-      </div>
-    </div>
-   
-            
-                          <button>Save</button>
-  </form>
+  </div>
+ 
+ 
+          
+     <button>Add New Settings</button>                   
+</form>
+
+<br>
+<ul *ngFor="let i of configList">
+  <li>
+    <a [routerLink]="['/addconfig/',i.name]"> <h3>{{i.name}} </h3> </a>
+      <button (click)="onRemoveconfig(i._id,i.name)">Remove</button>
+ 
+  </li>
+ 
+  
+</ul>
